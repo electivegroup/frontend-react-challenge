@@ -1,5 +1,14 @@
 # frontend-test
 
+## Instructions
+
+Below you’ll find a User story to be completed. Once you have completed your build, create a pull request and we will review your code.
+
+Assumptions:
+There is no need to implement any backed dependencies (databases, storage, etc).
+Feel free to use existing libraries when possible
+Include any instructions (if required) in the INSTRUCTIONS.md
+
 ## Create a basic single page app that mimics the behaviour of the Trello board.
 
 **As a** User
