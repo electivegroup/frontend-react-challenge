@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Frontend Challenge
 
-## Available Scripts
+## Create a basic single page app that mimics the behaviour of the Trello board.
 
-In the project directory, you can run:
+**As a** User
+**I want** to be able to create and move cards on a Trello style board
+**So that** I can manage my task list
 
-### `npm start`
+Acceptance Criteria:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- There should be 3 columns: “To Do”, “In Progress” and “Done”
+- Each card should have name and the description.
+- Each card should have due by date which I can specify.
+- I should be able to move the cards between columns in both directions.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Node >= 10.15.1
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Git >= 2.17.2
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Yarn >= 1.15.2
 
-### `npm run eject`
+## Installing
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Clone the repository to your local machine. Change to the projects working directory and run `yarn`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Running the solution
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+On the command line (terminal) at the projects top level folder run `yarn start`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Running the tests
 
-## Learn More
+`yarn test` to run tests.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Build the project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`yarn build` to run tests.
 
-### Code Splitting
+### Serve the project
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+`yarn global add serve` to install the server.
+`serve -s build` to launch the solution.
 
-### Analyzing the Bundle Size
+## Author
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- **Bernard Baker** - _Development_ - [Me on here](https://github.com/bernardbaker)
 
-### Making a Progressive Web App
+## Acknowledgments
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Nice people at RECii who took the time to put this together. Thanks! Look forward to working with you.
