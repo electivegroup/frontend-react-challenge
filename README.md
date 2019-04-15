@@ -40,3 +40,28 @@ Definition of Done:
 * Code commented
 * Tests written (Unit, Saga, Rendering)
 * Code Merged and Deployed to a staging area for review by non-developers
+
+Languages and Frameworks
+
+Below is a list of our currently used languages and frameworks. You are free to use these or others of your choice. Where you have used specific languages and frameworks different from those listed, please indicate why you made these choices and what limitations there may be. A short summary will suffice
+* HTML CSS
+* ReactJS
+* Javascript
+* Redux
+* Typescript
+* Symfony 4
+* Python
+* Go
+* NodeJS
+* Redis
+
+Notes:
+
+* Feel free to express your ability to fulfil the task with your own approach and interpretation.
+* The use of 3rd party plugins is permitted and expected as part of more efficient delivery
+* Use of open source is a preference
+* You must clearly demonstrate your ability to extend, modify, or integrate any 3rd party plugins with your own code
+* Where deviations from the original brief have occurred (intentional or otherwise), please provide comments as to your decisions
+* Feel free to suggest modifications, extensions or future plans that support your implementation
+* There is no required time that we expect you to work on this but please bear in mind that we will be using this to support your application to Elective
+* Don't be afraid to ask for more guidance if you are unsure on the task at hand 
