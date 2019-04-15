@@ -23,7 +23,7 @@ Acceptance Criteria:
   * total current number of tasks in the column
   * number of incompleted tasks in the column
   * number of completed tasks
-* These nubers should update automatically as I move cards between columns
+* These numbers should update automatically as I move cards between columns
 * Each card should have
   * Status - "Completed" or "Incompleted"
   * Name
