@@ -8,6 +8,7 @@ Assumptions:
 There is no need to implement any backed dependencies (databases, storage, etc).
 Feel free to use existing libraries when possible
 Include any instructions (if required) in the INSTRUCTIONS.md
+This is a technical and behavioural test.
 
 ## Create a basic single page app that mimics the behaviour of the Kanban boards.
 
@@ -18,8 +19,13 @@ Include any instructions (if required) in the INSTRUCTIONS.md
 Acceptance Criteria:
 
 * There should be 3 columns: “To Do”, “In Progress” and “Done”
+* Each column should display:
+  * total current number of tasks in the column
+  * number of incompleted tasks in the column
+  * number of completed tasks
+* These nubers should update automatically as I move cards between columns
 * Each card should have
-  * Status - Indicated by the columns
+  * Status - "Completed" or "Incompleted"
   * Name
   * Description
   * Due Date - Selectable from a date picker
