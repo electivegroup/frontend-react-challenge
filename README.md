@@ -44,16 +44,13 @@ Definition of Done:
 Languages and Frameworks
 
 Below is a list of our currently used languages and frameworks. You are free to use these or others of your choice. Where you have used specific languages and frameworks different from those listed, please indicate why you made these choices and what limitations there may be. A short summary will suffice
+
 * HTML CSS
 * ReactJS
 * Javascript
 * Redux
 * Typescript
-* Symfony 4
-* Python
-* Go
 * NodeJS
-* Redis
 
 Notes:
 
