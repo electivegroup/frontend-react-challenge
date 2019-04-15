@@ -1,17 +1,67 @@
 # Frontend Challenge
 
-## Create a basic single page app that mimics the behaviour of the Trello board.
+## Instructions
+
+Below you’ll find a User story to be completed. Please fork the repository. Once you have completed your build, create a pull request and we will review your code.
+
+Assumptions:
+There is no need to implement any backed dependencies (databases, storage, etc).
+Feel free to use existing libraries when possible
+Include any instructions (if required) in the INSTRUCTIONS.md
+This is a technical and behavioural test.
+
+## Create a basic single page app that mimics the behaviour of the Kanban boards.
 
 **As a** User
-**I want** to be able to create and move cards on a Trello style board
+**I want** to be able to create and move cards on a Kanban style board
 **So that** I can manage my task list
 
 Acceptance Criteria:
 
 - There should be 3 columns: “To Do”, “In Progress” and “Done”
-- Each card should have name and the description.
-- Each card should have due by date which I can specify.
+- Each column should display:
+  - total current number of tasks in the column
+  - number of incompleted tasks in the column
+  - number of completed tasks
+- These numbers should update automatically as I move cards between columns
+- Each card should have
+  - Status - "Completed" or "Incompleted"
+  - Name
+  - Description
+  - Due Date - Selectable from a date picker
+  - Labels
 - I should be able to move the cards between columns in both directions.
+- I can create, update and delete cards.
+- I can use my desktop or mobile.
+
+Definition of Done:
+
+- Application developed
+- Code commented
+- Tests written (Unit, Saga, Rendering)
+- Code Merged and Deployed to a staging area for review by non-developers
+
+Languages and Frameworks
+
+Below is a list of our currently used languages and frameworks. You are free to use these or others of your choice. Where you have used specific languages and frameworks different from those listed, please indicate why you made these choices and what limitations there may be. A short summary will suffice
+
+- HTML CSS
+- ReactJS
+- Javascript
+- Redux
+- Typescript
+- NodeJS
+
+Notes:
+
+- Feel free to express your ability to fulfil the task with your own approach and interpretation.
+- The use of 3rd party plugins is permitted and expected as part of more efficient delivery
+- Use of open source is a preference
+- You must clearly demonstrate your ability to extend, modify, or integrate any 3rd party plugins with your own code
+- Where deviations from the original brief have occurred (intentional or otherwise), please provide comments as to your decisions
+- Feel free to suggest modifications, extensions or future plans that support your implementation
+- There is no required time that we expect you to work on this but please bear in mind that we will be using this to support your application to Elective
+- Don't be afraid to ask for more guidance if you are unsure on the task at hand
 
 ---
 
