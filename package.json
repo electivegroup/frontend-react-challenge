@@ -10,7 +10,7 @@
     "react-dom": "*",
     "react-redux": "5.0.7",
     "react-scripts": "2.1.8",
-    "react-trello": "https://github.com/bernardbaker/electivegroup-react-trello.git",
+    "react-trello": "https://bernardbaker:ba9d40c871abf1049fa40e98844339b3cbf48095@github.com/bernardbaker/electivegroup-react-trello.git",
     "redux": "4.0.0",
     "redux-actions": "2.6.1",
     "redux-logger": "3.0.6",
