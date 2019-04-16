@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <>
         <kbd>Version: {packageJson.version}</kbd>
-        <Board data={getData()} draggable editable />;
+        <Board data={getData()} draggable editable />
       </>
     );
   }
