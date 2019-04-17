@@ -8590,9 +8590,9 @@ react-testing-library@^6.1.2:
     "@babel/runtime" "^7.4.2"
     dom-testing-library "^3.19.0"
 
-"react-trello@git+https://github.com/bernardbaker/electivegroup-react-trello.git":
+"react-trello@https://github.com/bernardbaker/electivegroup-react-trello.git":
   version "1.0.0"
-  resolved "git+https://github.com/bernardbaker/electivegroup-react-trello.git#3279664be0412383c4f68a5b7fcd7f0319f5fc8a"
+  resolved "https://github.com/bernardbaker/electivegroup-react-trello.git#3279664be0412383c4f68a5b7fcd7f0319f5fc8a"
   dependencies:
     "@terebentina/react-popover" "^2.0.0"
     classnames "^2.2.6"
