@@ -77,6 +77,8 @@ Git >= 2.17.2
 
 Yarn >= 1.15.2
 
+Semver versioning https://semver.org/.
+
 ## Installing
 
 Clone the repository to your local machine. Change to the projects working directory and run `yarn`.
