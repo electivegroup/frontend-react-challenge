@@ -8572,6 +8572,16 @@ react-scripts@2.1.8:
   optionalDependencies:
     fsevents "1.2.4"
 
+react-test-renderer@^16.0.0-0:
+  version "16.8.6"
+  resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.8.6.tgz#188d8029b8c39c786f998aa3efd3ffe7642d5ba1"
+  integrity sha512-H2srzU5IWYT6cZXof6AhUcx/wEyJddQ8l7cLM/F7gDXYyPr4oq+vCIxJYXVGhId1J706sqziAjuOEjyNkfgoEw==
+  dependencies:
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+    react-is "^16.8.6"
+    scheduler "^0.13.6"
+
 react-testing-library@^6.1.2:
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-6.1.2.tgz#f6bba6eeecedac736eb00b22b4c70bae04535a4f"
@@ -8580,9 +8590,9 @@ react-testing-library@^6.1.2:
     "@babel/runtime" "^7.4.2"
     dom-testing-library "^3.19.0"
 
-"react-trello@https://bernardbaker:ba9d40c871abf1049fa40e98844339b3cbf48095@github.com/bernardbaker/electivegroup-react-trello.git":
+"react-trello@git+https://github.com/bernardbaker/electivegroup-react-trello.git":
   version "1.0.0"
-  resolved "https://bernardbaker:ba9d40c871abf1049fa40e98844339b3cbf48095@github.com/bernardbaker/electivegroup-react-trello.git#3279664be0412383c4f68a5b7fcd7f0319f5fc8a"
+  resolved "git+https://github.com/bernardbaker/electivegroup-react-trello.git#3279664be0412383c4f68a5b7fcd7f0319f5fc8a"
   dependencies:
     "@terebentina/react-popover" "^2.0.0"
     classnames "^2.2.6"
