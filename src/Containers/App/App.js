@@ -1,6 +1,6 @@
 import React, { Component, lazy, Suspense } from "react";
-import { getData } from "./data/Store";
-import packageJson from "./package.config.json";
+import { getData } from "../../data/Store";
+import packageJson from "../../package.config.json";
 
 const Board = lazy(() => import("react-trello"));
 
