@@ -9,13 +9,29 @@ const data = {
           id: "Card2",
           title: "Hired Bernard!",
           description: "He does deliver!",
-          label: "ASAP"
+          label: "ASAP",
+          tags: [
+            {
+              title: "Improvement",
+              color: "white",
+              bgcolor: "orange",
+              tagStyle: {}
+            }
+          ]
         },
         {
           id: "Card1",
           title: "Write Blog",
           description: "About successful release of product",
-          label: "17/09/2019"
+          label: "17/09/2019",
+          tags: [
+            {
+              title: "Feature",
+              color: "white",
+              bgcolor: "orange",
+              tagStyle: {}
+            }
+          ]
         }
       ]
     },
