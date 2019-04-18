@@ -2,6 +2,9 @@
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
+// configure adapter
+configure({ adapter: new Adapter() });
+
 /*
 Lodash is a JavaScript library that helps programmers write
 more concise and easier to maintain JavaScript.
@@ -14,9 +17,6 @@ you can use to extend jest. These will make your tests more
 declarative, clear to read and to maintain.
 */
 import "jest-dom/extend-expect";
-
-// configure adapter
-configure({ adapter: new Adapter() });
 
 // handle 3rd party css errors from old parser - needs upgrading
 // handle 3rd party prop type error - needs upgrading
