@@ -45,7 +45,8 @@
     "collectCoverageFrom": [
       "!**/serviceWorker.js",
       "!**/setupTests.js",
-      "src/*.js"
+      "!src/index.js",
+      "src/**.js"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
