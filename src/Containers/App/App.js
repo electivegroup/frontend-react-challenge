@@ -13,7 +13,7 @@ class App extends Component {
         <kbd>Version: {packageJson.version}</kbd>
         <Suspense fallback={<h1>Loading...</h1>}>
           <Board data={getData()} draggable editable customCardLayout>
-            <CustomCard />
+            <CustomCard titleDoubleClick={() => {}} />
           </Board>
         </Suspense>
       </>
