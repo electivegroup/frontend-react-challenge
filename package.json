@@ -46,6 +46,7 @@
       "!**/serviceWorker.js",
       "!**/setupTests.js",
       "!src/index.js",
+      "!src/suppressWarnings.js",
       "src/**.js"
     ],
     "snapshotSerializers": [

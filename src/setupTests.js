@@ -18,11 +18,5 @@ declarative, clear to read and to maintain.
 */
 import "jest-dom/extend-expect";
 
-// handle 3rd party css errors from old parser - needs upgrading
-// handle 3rd party prop type error - needs upgrading
-const originalConsoleError = console.error;
-console.error = console.warn = function(msg) {
-  if (_.startsWith(msg, "Error: Could not parse CSS stylesheet")) return;
-  if (_.startsWith(msg, "Warning: Failed prop type")) return;
-  originalConsoleError(msg);
-};
+// Suppress known warnings until patch is released
+import "./suppressWarnings";

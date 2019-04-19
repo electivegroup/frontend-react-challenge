@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./Containers/App/App";
 import * as serviceWorker from "./serviceWorker";
+// Suppress known warnings until patch is released
+import "./suppressWarnings";
 
 ReactDOM.render(
   <App />,
