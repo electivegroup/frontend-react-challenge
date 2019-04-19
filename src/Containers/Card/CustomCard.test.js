@@ -81,7 +81,7 @@ describe("Custom Card", () => {
     expect(props.onDelete).toHaveBeenCalledTimes(1);
   });
 
-  it("allows a user to edit the title text - when the text is double clicked", () => {
+  it("allows a user to edit the title (name) text - when the text is double clicked - and clicked again", () => {
     // Act
     const { getByText } = render(<CustomCard {...props} />);
 
@@ -91,14 +91,31 @@ describe("Custom Card", () => {
     fireEvent.doubleClick(node);
 
     expect(props.titleDoubleClick).toHaveBeenCalledTimes(1);
-    expect(node).toHaveAttribute("contentEditable", "true");
+    expect(node).toHaveAttribute("contenteditable", "true");
 
     fireEvent.change(node, { target: { textContent: "Updated Title" } });
-
     fireEvent.doubleClick(node);
 
     expect(props.titleDoubleClick).toHaveBeenCalledTimes(2);
-    expect(node).toHaveAttribute("contentEditable", "false");
+    expect(node).toHaveAttribute("contenteditable", "false");
     expect(node.textContent).toBe("Updated Title");
+  });
+
+  it("doesn't allow the user to leave the title (name) text empty", () => {
+    // Act
+    const { getByText } = render(<CustomCard {...props} />);
+
+    // Assert
+    const node = getByText(props.title);
+
+    fireEvent.doubleClick(node);
+
+    expect(props.titleDoubleClick).toHaveBeenCalledTimes(1);
+    expect(node).toHaveAttribute("contenteditable", "true");
+
+    fireEvent.change(node, { target: { textContent: "" } });
+    fireEvent.blur(node);
+
+    expect(node.textContent).toBe(props.title);
   });
 });
