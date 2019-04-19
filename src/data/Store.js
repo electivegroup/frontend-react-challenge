@@ -7,8 +7,9 @@ const data = {
       cards: [
         {
           id: "Card2",
-          title: "Hired Bernard!",
-          description: "He does deliver!",
+          title: "Hired Bernard yet?",
+          description:
+            "Click the title three times to edit and double click to stop editing.",
           label: "ASAP",
           tags: [
             {
