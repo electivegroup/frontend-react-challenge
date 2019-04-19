@@ -40,7 +40,8 @@ describe("Custom Card", () => {
       cardStyle: {},
       dragStyle: {},
       tagStyle: {},
-      editable: true
+      editable: true,
+      titleDoubleClick: jest.fn(() => console.log("titleDoubleClick called"))
     };
   });
 
@@ -78,5 +79,26 @@ describe("Custom Card", () => {
 
     expect(props.onDelete).toHaveBeenCalledWith(props.id, props.laneId);
     expect(props.onDelete).toHaveBeenCalledTimes(1);
+  });
+
+  it("allows a user to edit the title text - when the text is double clicked", () => {
+    // Act
+    const { getByText } = render(<CustomCard {...props} />);
+
+    // Assert
+    const node = getByText(props.title);
+
+    fireEvent.doubleClick(node);
+
+    expect(props.titleDoubleClick).toHaveBeenCalledTimes(1);
+    expect(node).toHaveAttribute("contentEditable", "true");
+
+    fireEvent.change(node, { target: { textContent: "Updated Title" } });
+
+    fireEvent.doubleClick(node);
+
+    expect(props.titleDoubleClick).toHaveBeenCalledTimes(2);
+    expect(node).toHaveAttribute("contentEditable", "false");
+    expect(node.textContent).toBe("Updated Title");
   });
 });

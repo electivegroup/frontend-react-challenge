@@ -16,7 +16,8 @@ const CustomCard = ({
   cardStyle,
   dragStyle,
   tagStyle,
-  editable
+  editable,
+  titleDoubleClick
 }) => (
   <Card
     data-testid={id}
@@ -35,6 +36,7 @@ const CustomCard = ({
     dragStyle={dragStyle}
     tagStyle={tagStyle}
     editable={editable}
+    titleDoubleClick={titleDoubleClick}
   />
 );
 
