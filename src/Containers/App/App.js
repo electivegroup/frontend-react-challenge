@@ -15,6 +15,7 @@ class App extends Component {
           <Board data={getData()} draggable editable customCardLayout>
             <CustomCard
               titleDoubleClick={e => {
+                e.target.focus();
                 console.log("double click", e);
               }}
             />
