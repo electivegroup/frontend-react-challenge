@@ -17,6 +17,9 @@ class App extends Component {
               titleDoubleClick={e => {
                 console.log("double click", e);
               }}
+              descriptionDoubleClicked={e => {
+                console.log("double click", e);
+              }}
             />
           </Board>
         </Suspense>

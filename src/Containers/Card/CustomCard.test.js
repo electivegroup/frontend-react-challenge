@@ -41,7 +41,10 @@ describe("Custom Card", () => {
       dragStyle: {},
       tagStyle: {},
       editable: true,
-      titleDoubleClick: jest.fn(() => console.log("titleDoubleClick called"))
+      titleDoubleClick: jest.fn(() => console.log("titleDoubleClick called")),
+      descriptionDoubleClicked: jest.fn(() =>
+        console.log("descriptionDoubleClicked called")
+      )
     };
   });
 
@@ -117,5 +120,43 @@ describe("Custom Card", () => {
     fireEvent.blur(node);
 
     expect(node.textContent).toBe(props.title);
+  });
+
+  it("allows a user to edit the description text - when the text is double clicked - and clicked again", () => {
+    // Act
+    const { getByText } = render(<CustomCard {...props} />);
+
+    // Assert
+    const node = getByText(props.description);
+
+    fireEvent.doubleClick(node);
+
+    expect(props.descriptionDoubleClicked).toHaveBeenCalledTimes(1);
+    expect(node).toHaveAttribute("contenteditable", "true");
+
+    fireEvent.change(node, { target: { textContent: "Updated Description" } });
+    fireEvent.doubleClick(node);
+
+    expect(props.descriptionDoubleClicked).toHaveBeenCalledTimes(2);
+    expect(node).toHaveAttribute("contenteditable", "false");
+    expect(node.textContent).toBe("Updated Description");
+  });
+
+  it("doesn't allow the user to leave the description text empty", () => {
+    // Act
+    const { getByText } = render(<CustomCard {...props} />);
+
+    // Assert
+    const node = getByText(props.description);
+
+    fireEvent.doubleClick(node);
+
+    expect(props.descriptionDoubleClicked).toHaveBeenCalledTimes(1);
+    expect(node).toHaveAttribute("contenteditable", "true");
+
+    fireEvent.change(node, { target: { textContent: "" } });
+    fireEvent.blur(node);
+
+    expect(node.textContent).toBe(props.description);
   });
 });
