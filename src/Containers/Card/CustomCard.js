@@ -1,6 +1,8 @@
 import React from "react";
 import { Card } from "react-trello";
 
+import "./Container.css";
+
 const CustomCard = ({
   id,
   title,

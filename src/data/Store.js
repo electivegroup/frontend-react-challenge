@@ -10,7 +10,7 @@ const data = {
           title: "Hired Bernard yet?",
           description:
             "Click the title three times to edit and double click to stop editing.",
-          label: "ASAP",
+          label: "Fri Apr 19 2019 15:50:40 GMT+0100",
           tags: [
             {
               title: "Improvement",
@@ -24,7 +24,7 @@ const data = {
           id: "Card1",
           title: "Write Blog",
           description: "About successful release of product",
-          label: "17/09/2019",
+          label: "Fri Apr 19 2019 15:50:40 GMT+0100",
           tags: [
             {
               title: "Feature",
