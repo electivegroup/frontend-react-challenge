@@ -13,13 +13,13 @@ const data = {
           label: "Fri Apr 19 2019 15:50:40 GMT+0100",
           tags: [
             {
-              title: "Improvement",
+              title: "Improvement 1",
               color: "white",
               bgcolor: "orange",
               tagStyle: {}
             },
             {
-              title: "Improvement",
+              title: "Improvement 2",
               color: "white",
               bgcolor: "orange",
               tagStyle: {}
@@ -31,7 +31,7 @@ const data = {
               tagStyle: {}
             },
             {
-              title: "Improvement",
+              title: "Improvement 3",
               color: "white",
               bgcolor: "orange",
               tagStyle: {}
@@ -43,7 +43,7 @@ const data = {
               tagStyle: {}
             },
             {
-              title: "Improvement",
+              title: "Improvement 4",
               color: "white",
               bgcolor: "orange",
               tagStyle: {}
@@ -55,19 +55,19 @@ const data = {
               tagStyle: {}
             },
             {
-              title: "Improvement",
+              title: "Improvement 5",
               color: "white",
               bgcolor: "orange",
               tagStyle: {}
             },
             {
-              title: "Improvement",
+              title: "Improvement 6",
               color: "white",
               bgcolor: "orange",
               tagStyle: {}
             },
             {
-              title: "Improvement",
+              title: "Improvement 7",
               color: "white",
               bgcolor: "orange",
               tagStyle: {}
@@ -85,7 +85,7 @@ const data = {
               tagStyle: {}
             },
             {
-              title: "Improvement",
+              title: "Improvement 8",
               color: "white",
               bgcolor: "orange",
               tagStyle: {}
