@@ -1,6 +1,7 @@
 import React from "react";
 import { render, fireEvent, cleanup } from "react-testing-library";
 import CustomCard from "./CustomCard";
+import { formatDate } from "./Utilities";
 
 describe("Custom Card", () => {
   // Create props for tests
@@ -13,7 +14,7 @@ describe("Custom Card", () => {
       title: "John Smith",
       index: 0,
       description: "The card description",
-      label: "due in a day",
+      label: "Fri Apr 19 2019 15:50:40 GMT+0100",
       tags: [
         {
           title: "Bug",
@@ -52,18 +53,23 @@ describe("Custom Card", () => {
 
   test("it renders the custom card with props", () => {
     // Act
-    const { getByText } = render(<CustomCard {...props} />);
+    const { getByTestId, getByText } = render(<CustomCard {...props} />);
 
     // Assert
     const titleNode = getByText(props.title);
     const descriptionNode = getByText(props.description);
-    const labelNode = getByText(props.label);
+
+    const dueDate = formatDate(props.label);
+    const datePickerNode = getByTestId("date-picker");
+    const labelNode = datePickerNode.getElementsByTagName("input")[0];
+
     const firstTagNode = getByText(props.tags[0].title);
     const secondTagNode = getByText(props.tags[1].title);
 
     expect(titleNode).toBeDefined();
     expect(descriptionNode).toBeDefined();
     expect(labelNode).toBeDefined();
+    expect(labelNode.value).toBe(dueDate);
     expect(firstTagNode).toBeDefined();
     expect(secondTagNode).toBeDefined();
   });
@@ -158,5 +164,69 @@ describe("Custom Card", () => {
     fireEvent.blur(node);
 
     expect(node.textContent).toBe(props.description);
+  });
+
+  it("should display a predefined date in the date picker input field", () => {
+    // Act
+    const { getByTestId } = render(<CustomCard {...props} />);
+
+    const dueDate = formatDate(props.label);
+    const datePickerNode = getByTestId("date-picker");
+    const labelNode = datePickerNode.getElementsByTagName("input")[0];
+
+    // Assert
+    expect(labelNode.value).toBe(dueDate);
+  });
+
+  it("should allow the user to change the date in the date picker input field", () => {
+    // Act
+    const { getByTestId } = render(<CustomCard {...props} />);
+
+    const datePickerNode = getByTestId("date-picker");
+    const labelNode = datePickerNode.getElementsByTagName("input")[0];
+
+    const newDate = formatDate(new Date());
+    labelNode.value = newDate;
+
+    fireEvent.change(labelNode, { target: { value: newDate } });
+
+    // Assert
+    expect(labelNode.value).toBe(newDate);
+  });
+
+  it("should default to the predefined props date if field is empty", () => {
+    // Act
+    const { getByTestId } = render(<CustomCard {...props} />);
+
+    const dueDate = formatDate(props.label);
+    const datePickerNode = getByTestId("date-picker");
+    const labelNode = datePickerNode.getElementsByTagName("input")[0];
+
+    const newDate = "";
+    labelNode.value = newDate;
+
+    fireEvent.change(labelNode, { target: { value: newDate } });
+    fireEvent.blur(labelNode);
+
+    // Assert
+    expect(labelNode.value).toBe(dueDate);
+  });
+
+  it("should default to the predefined props date if bad data is enterd", () => {
+    // Act
+    const { getByTestId } = render(<CustomCard {...props} />);
+
+    const dueDate = formatDate(props.label);
+    const datePickerNode = getByTestId("date-picker");
+    const labelNode = datePickerNode.getElementsByTagName("input")[0];
+
+    const newDate = "sdgasghsh 23rwgs sg";
+    labelNode.value = newDate;
+
+    fireEvent.change(labelNode, { target: { value: newDate } });
+    fireEvent.blur(labelNode);
+
+    // Assert
+    expect(labelNode.value).toBe(dueDate);
   });
 });
