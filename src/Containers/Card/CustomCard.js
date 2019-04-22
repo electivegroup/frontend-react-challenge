@@ -40,6 +40,9 @@ const CustomCard = ({
     editable={editable}
     titleDoubleClick={titleDoubleClick}
     descriptionDoubleClicked={descriptionDoubleClicked}
+    deleteTag={(cardId, tagId) => {
+      console.log(`Delete ${cardId}'s tag with ID: ${tagId}.`);
+    }}
   />
 );
 
