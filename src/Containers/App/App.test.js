@@ -6,6 +6,7 @@ import App from "./App";
 
 describe("App", () => {
   it("renders lazily - suspense loading state", async () => {
+    debugger;
     const { getByText } = render(<App />);
     expect(getByText(/Loading\.\.\./i)).toBeInTheDocument();
   });

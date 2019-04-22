@@ -1,5 +1,6 @@
 import React from "react";
-import { render, fireEvent, cleanup } from "react-testing-library";
+import { render, fireEvent } from "react-testing-library";
+import "react-testing-library/cleanup-after-each";
 import CustomCard from "./CustomCard";
 import { formatDate } from "./Utilities";
 
@@ -30,42 +31,30 @@ describe("Custom Card", () => {
         }
       ],
       laneId: "Lane1",
-      removeCard: jest.fn((laneId, id) =>
-        console.log("removeCard called: ", laneId, id)
-      ),
-      onClick: () => console.log("onClick called"),
-      onDelete: jest.fn((id, laneId) =>
-        console.log("onDelete called: ", id, laneId)
-      ),
+      removeCard: jest.fn((laneId, id) => {}),
+      onClick: jest.fn(() => {}),
+      onDelete: jest.fn((id, laneId) => {}),
       metaData: {},
       cardStyle: {},
       dragStyle: {},
       tagStyle: {},
       editable: true,
-      titleDoubleClick: jest.fn(() => console.log("titleDoubleClick called")),
-      descriptionDoubleClicked: jest.fn(() =>
-        console.log("descriptionDoubleClicked called")
-      )
+      titleDoubleClick: jest.fn(() => {}),
+      descriptionDoubleClicked: jest.fn(() => {})
     };
   });
-
-  afterEach(cleanup);
 
   test("it renders the custom card with props", () => {
     // Act
     const { getByTestId, getByText } = render(<CustomCard {...props} />);
-
     // Assert
     const titleNode = getByText(props.title);
     const descriptionNode = getByText(props.description);
-
     const dueDate = formatDate(props.label);
     const datePickerNode = getByTestId("date-picker");
     const labelNode = datePickerNode.getElementsByTagName("input")[0];
-
     const firstTagNode = getByText(props.tags[0].title);
     const secondTagNode = getByText(props.tags[1].title);
-
     expect(titleNode).toBeDefined();
     expect(descriptionNode).toBeDefined();
     expect(labelNode).toBeDefined();
