@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { render, fireEvent } from "react-testing-library";
 import "react-testing-library/cleanup-after-each";
 import CustomTag from "./CustomTag";
 
@@ -10,10 +10,13 @@ describe("Enhanced Tag", () => {
   beforeEach(() => {
     // Arrange
     props = {
+      cardId: "Card1",
+      tagId: 0,
       title: "Tag Title",
       color: "white",
       bgcolor: "orange",
-      tagStyle: {}
+      tagStyle: {},
+      deleteTag: jest.fn((cardId, tagId) => {})
     };
   });
 
@@ -33,5 +36,17 @@ describe("Enhanced Tag", () => {
     // Assert
     const node = getByTestId("tag-delete-button");
     expect(node).toBeDefined();
+  });
+
+  it("should call tagOnDelete when the delete button is pressed", () => {
+    // Act
+    const { getByTestId } = render(<CustomTag {...props} />);
+
+    const node = getByTestId("tag-delete-button");
+
+    fireEvent.click(node);
+
+    expect(props.deleteTag).toHaveBeenCalledWith(props.cardId, props.tagId);
+    expect(props.deleteTag).toHaveBeenCalledTimes(1);
   });
 });
