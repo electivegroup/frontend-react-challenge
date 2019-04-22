@@ -4,13 +4,14 @@
   "private": true,
   "dependencies": {
     "apisauce": "^1.0.2",
+    "dotenv": "^7.0.0",
     "lodash": "4.17.11",
     "prop-types": "^15.7.2",
     "react": "*",
     "react-dom": "*",
     "react-redux": "5.0.7",
     "react-scripts": "2.1.8",
-    "react-trello": "https://bernardbaker:ff5e35176173e66849728e7e834dc031dbf18bb3@github.com/bernardbaker/electivegroup-react-trello.git#dev/02-enhance-project",
+    "react-trello": "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/bernardbaker/electivegroup-react-trello.git#dev/02-enhance-project",
     "redux": "4.0.0",
     "redux-actions": "2.6.1",
     "redux-logger": "3.0.6",
@@ -19,6 +20,7 @@
     "styled-components": "^4.2.0"
   },
   "scripts": {
+    "preinstall": "node preinstall.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watch --updateSnapshot --collectCoverage",
