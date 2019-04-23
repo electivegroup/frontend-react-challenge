@@ -20,6 +20,7 @@ class App extends Component {
               descriptionDoubleClicked={e => {
                 console.log("double click", e);
               }}
+              deleteTag={(cardId, tagId) => {}}
             />
           </Board>
         </Suspense>

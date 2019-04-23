@@ -3,6 +3,10 @@ import { render, fireEvent } from "react-testing-library";
 import "react-testing-library/cleanup-after-each";
 import CustomTag from "./CustomTag";
 
+import { toBeInTheDocument } from "jest-dom";
+
+expect.extend({ toBeInTheDocument });
+
 describe("Enhanced Tag", () => {
   // Create props for tests
   let props = null;
@@ -38,10 +42,11 @@ describe("Enhanced Tag", () => {
     expect(node).toBeDefined();
   });
 
-  it("should call tagOnDelete when the delete button is pressed", () => {
+  it("should call deleteTag when the delete button is pressed", () => {
     // Act
     const { getByTestId } = render(<CustomTag {...props} />);
 
+    // Assert
     const node = getByTestId("tag-delete-button");
 
     fireEvent.click(node);

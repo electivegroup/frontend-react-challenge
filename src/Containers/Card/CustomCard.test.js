@@ -18,16 +18,24 @@ describe("Custom Card", () => {
       label: "Fri Apr 19 2019 15:50:40 GMT+0100",
       tags: [
         {
-          title: "Bug",
+          cardId: "Card1",
+          tagId: 0,
+          title: "Tag Title",
           color: "white",
           bgcolor: "orange",
-          tagStyle: {}
+          tagStyle: {},
+          deleteTag: jest.fn((cardId, tagId) => {
+            console.log("hello world");
+          })
         },
         {
+          cardId: "Card1",
+          tagId: 1,
           title: "Feature",
           color: "white",
           bgcolor: "orange",
-          tagStyle: {}
+          tagStyle: {},
+          deleteTag: jest.fn((cardId, tagId) => {})
         }
       ],
       laneId: "Lane1",
@@ -40,7 +48,8 @@ describe("Custom Card", () => {
       tagStyle: {},
       editable: true,
       titleDoubleClick: jest.fn(() => {}),
-      descriptionDoubleClicked: jest.fn(() => {})
+      descriptionDoubleClicked: jest.fn(() => {}),
+      deleteTag: jest.fn((cardId, tagId) => {})
     };
   });
 
@@ -217,5 +226,23 @@ describe("Custom Card", () => {
 
     // Assert
     expect(labelNode.value).toBe(dueDate);
+  });
+
+  it("should not be in the document after deleteTag is called", () => {
+    // Act
+    const { getByTestId } = render(<CustomCard {...props} />);
+
+    // Assert
+    const node = getByTestId("tag-delete-button");
+
+    debugger;
+
+    fireEvent.click(node);
+
+    expect(props.deleteTag).toBeCalledWith(
+      props.tags[0].cardId,
+      props.tags[0].tagId
+    );
+    expect(props.deleteTag).toBeCalledTimes(1);
   });
 });
