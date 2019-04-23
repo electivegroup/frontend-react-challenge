@@ -23,10 +23,7 @@ describe("Custom Card", () => {
           title: "Tag Title",
           color: "white",
           bgcolor: "orange",
-          tagStyle: {},
-          deleteTag: jest.fn((cardId, tagId) => {
-            console.log("hello world");
-          })
+          tagStyle: {}
         },
         {
           cardId: "Card1",
@@ -34,8 +31,7 @@ describe("Custom Card", () => {
           title: "Feature",
           color: "white",
           bgcolor: "orange",
-          tagStyle: {},
-          deleteTag: jest.fn((cardId, tagId) => {})
+          tagStyle: {}
         }
       ],
       laneId: "Lane1",
