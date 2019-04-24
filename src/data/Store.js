@@ -11,32 +11,14 @@ const data = {
           description:
             "Click the title three times to edit and double click to stop editing.",
           label: "Fri Apr 19 2019 15:50:40 GMT+0100",
-          tags: [
-            {
-              cardId: "Card2",
-              tagId: 0,
-              title: "Improvement 1",
-              color: "white",
-              bgcolor: "orange",
-              tagStyle: {}
-            }
-          ]
+          tags: []
         },
         {
           id: "Card1",
           title: "Write Blog",
           description: "About successful release of product",
           label: "Fri Apr 19 2019 15:50:40 GMT+0100",
-          tags: [
-            {
-              cardId: "Card1",
-              tagId: 1,
-              title: "Feature",
-              color: "white",
-              bgcolor: "orange",
-              tagStyle: {}
-            }
-          ]
+          tags: []
         }
       ]
     },
