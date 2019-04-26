@@ -1,5 +1,3 @@
-/* Enhancement to see the date picker */
-.react-trello-board > div,
 .smooth-dnd-container.vertical > .smooth-dnd-draggable-wrapper {
   overflow: visible !important;
 }
@@ -7,5 +5,7 @@
 /* Enhancement to reduce with width of the date picker input field */
 .react-datepicker__input-container > input {
   width: 100%;
-  text-align: center;
+  text-align: right;
+  border-style: none;
+  background: transparent;
 }
