@@ -1,11 +1,14 @@
-const data = {
+let data = {
   lanes: [
     {
       id: "Lane1",
       title: "To Do",
       label: "2/2",
+      incomplete: "0/0",
+      complete: "0/0",
       cards: [
         {
+          status: false,
           id: "Card2",
           title: "Hired Bernard yet?",
           description:
@@ -14,6 +17,7 @@ const data = {
           tags: []
         },
         {
+          status: false,
           id: "Card1",
           title: "Write Blog",
           description: "About successful release of product",
@@ -26,12 +30,16 @@ const data = {
       id: "Lane2",
       title: "In Progress",
       label: "0/0",
+      incomplete: "0/0",
+      complete: "0/0",
       cards: []
     },
     {
       id: "Lane3",
       title: "Done",
       label: "0/0",
+      incomplete: "0/0",
+      complete: "0/0",
       cards: []
     }
   ]
