@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Card from "react-trello/dist/components/Card";
-import "./Container.css";
 import { tagTemplate } from "../Tag/Utilities";
 import uuidv1 from "uuid/v1";
+import "./Container.css";
 
 class CustomCard extends Component {
   constructor(props) {
@@ -45,9 +45,7 @@ class CustomCard extends Component {
 
   deleteTag = (cardId, tagId) => {
     const { deleteTag } = this.props;
-    const filteredTags = this.state.tags.filter(
-      item => item.tagId !== tagId
-    );
+    const filteredTags = this.state.tags.filter(item => item.tagId !== tagId);
     this.setState(
       {
         tags: filteredTags
@@ -59,10 +57,9 @@ class CustomCard extends Component {
   };
 
   createTag = () => {
-    const { cardId } = this.props;
-
+    const { id } = this.props;
     const source = {
-      cardId: cardId,
+      cardId: id,
       tagId: uuidv1(),
       title: "Double click to edit"
     };
@@ -85,7 +82,7 @@ class CustomCard extends Component {
       laneId,
       removeCard,
       onClick,
-      onDelete,
+      deleteCard,
       metaData,
       cardStyle,
       dragStyle,
@@ -107,7 +104,7 @@ class CustomCard extends Component {
         laneId={laneId}
         removeCard={removeCard}
         onClick={onClick}
-        onDelete={onDelete}
+        deleteCard={deleteCard}
         metaData={metaData}
         cardStyle={cardStyle}
         dragStyle={dragStyle}
