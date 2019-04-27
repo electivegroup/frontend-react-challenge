@@ -10,14 +10,6 @@ import * as _ from "lodash";
 const originalConsoleError = console.log;
 console.error = console.warn = function(...msg) {
   if (_.startsWith(msg, "Error: Could not parse CSS stylesheet")) return;
-  if (_.startsWith(msg, "Warning: Failed prop type")) return;
-  if (
-    _.startsWith(
-      msg,
-      "Warning: A component is `contentEditable` and contains `children` managed by React."
-    )
-  )
-    return;
-  if (_.startsWith(msg, "Warning: Unknown event handler property")) return;
+  if (_.startsWith(msg, "Warning:")) return;
   originalConsoleError(msg);
 };
