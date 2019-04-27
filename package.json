@@ -6,6 +6,7 @@
         "apisauce": "^1.0.2",
         "dotenv": "^7.0.0",
         "fs": "^0.0.1-security",
+        "immutable": "^4.0.0-rc.12",
         "lodash": "4.17.11",
         "prop-types": "^15.7.2",
         "react": "^16.8.6",
