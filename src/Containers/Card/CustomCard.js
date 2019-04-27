@@ -89,7 +89,8 @@ class CustomCard extends Component {
       tagStyle,
       editable,
       titleDoubleClick,
-      descriptionDoubleClicked
+      descriptionDoubleClicked,
+      status
     } = this.props;
     const tags = this.state.tags;
     return (
@@ -114,6 +115,7 @@ class CustomCard extends Component {
         descriptionDoubleClicked={descriptionDoubleClicked}
         deleteTag={this.deleteTag}
         createTag={this.createTag}
+        status={status}
       />
     );
   }

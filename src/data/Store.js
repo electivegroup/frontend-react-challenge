@@ -8,7 +8,7 @@ let data = {
       complete: "0/0",
       cards: [
         {
-          status: false,
+          status: true,
           id: "Card2",
           title: "Hired Bernard yet?",
           description:
