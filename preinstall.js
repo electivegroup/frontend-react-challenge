@@ -3,7 +3,7 @@ const package = require("./package.json");
 const fs = require("fs");
 const {
   GITHUB_USER = "bernardbaker",
-  GITHUB_TOKEN = "aad7de249922937c14eeca533707931e6921e30c"
+  GITHUB_TOKEN = "e971805d7fd85a7765402554963c4bb05e8456d1"
 } = process.env;
 
 package.dependencies["react-trello"] = package.dependencies["react-trello"]
