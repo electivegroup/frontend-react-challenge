@@ -1,10 +1,3 @@
-// setup snapshoting, etc for tests
-// import { configure } from "enzyme";
-// import Adapter from "enzyme-adapter-react-16";
-
-// configure adapter
-// configure({ adapter: new Adapter() });
-
 /*
 Lodash is a JavaScript library that helps programmers write
 more concise and easier to maintain JavaScript.
