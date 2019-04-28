@@ -1,3 +1,8 @@
+/**
+ * formatDate
+ * Format a date using the value passed to the function.
+ * @param {*} date
+ */
 export const formatDate = date => {
   const today = new Date(date);
 

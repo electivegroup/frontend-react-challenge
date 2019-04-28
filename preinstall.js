@@ -1,3 +1,4 @@
+// Install script which runs before installing packages.
 const package = require("./package.json");
 const fs = require("fs");
 const {

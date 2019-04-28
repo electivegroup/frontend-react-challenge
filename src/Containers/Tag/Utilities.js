@@ -1,3 +1,8 @@
+/**
+ * tagTemplate
+ * Return the shape of the tag.
+ * @return {object} the newly request tag shape.
+ */
 export const tagTemplate = () => {
   const data = {
     editable: true,

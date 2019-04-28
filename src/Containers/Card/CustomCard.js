@@ -37,6 +37,12 @@ class CustomCard extends Component {
     }
   };
 
+  /**
+   * deleteTag
+   * Remove a tag from a card.
+   * @param {string} - the cards ID
+   * @param {string} - the tags ID
+   */
   deleteTag = (cardId, tagId) => {
     const { deleteTag } = this.props;
     const filteredTags = this.state.tags.filter(item => item.tagId !== tagId);
@@ -50,6 +56,10 @@ class CustomCard extends Component {
     );
   };
 
+  /**
+   * createTag
+   * Create a tag using a data template, and update the state.
+   */
   createTag = () => {
     const { id } = this.props;
     const source = {
