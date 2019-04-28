@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import Card from "react-trello/dist/components/Card";
 import { tagTemplate } from "../Tag/Utilities";
 import uuidv1 from "uuid/v1";
@@ -29,18 +30,11 @@ class CustomCard extends Component {
       return {
         tags: props.tags
       };
-    }
-    if (state.tags !== null) {
+    } else {
       return {
         tags: state.tags
       };
     }
-    if (props.tags !== state.tags) {
-      return {
-        tags: props.tags
-      };
-    }
-    return null;
   };
 
   deleteTag = (cardId, tagId) => {
@@ -120,5 +114,31 @@ class CustomCard extends Component {
     );
   }
 }
+
+CustomCard.defaultProps = {
+  titleDoubleClick: () => {},
+  descriptionDoubleClicked: () => {},
+  deleteCard: () => {}
+};
+
+CustomCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  index: PropTypes.number,
+  description: PropTypes.string,
+  label: PropTypes.string,
+  laneId: PropTypes.string.isRequired,
+  removeCard: PropTypes.func,
+  onClick: PropTypes.func,
+  deleteCard: PropTypes.func,
+  metadata: PropTypes.object,
+  cardStyle: PropTypes.object,
+  dragStyle: PropTypes.object,
+  tagStyle: PropTypes.object,
+  editable: PropTypes.bool,
+  titleDoubleClick: PropTypes.func,
+  descriptionDoubleClicked: PropTypes.func,
+  status: PropTypes.bool
+};
 
 export default CustomCard;
