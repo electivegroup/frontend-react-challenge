@@ -1,6 +1,7 @@
 // Install script which runs before installing packages.
 const package = require("./package.json");
 const fs = require("fs");
+// Look in the package.json to match up the values and where they should be...
 const {
   GITHUB_USER = "your Git Hub handler - user name",
   GITHUB_TOKEN = "your Git Hub PAT API token - fsj23424dhflkfghkjsho978fuskjhfkj68i7"
