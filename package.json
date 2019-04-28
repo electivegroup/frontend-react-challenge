@@ -13,7 +13,7 @@
         "react-dom": "^16.8.6",
         "react-redux": "^7.0.2",
         "react-scripts": "2.1.8",
-        "react-trello": "https://bernardbaker:e971805d7fd85a7765402554963c4bb05e8456d1@github.com/bernardbaker/electivegroup-react-trello.git#dev/02-enhance-project",
+        "react-trello": "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/YOUR-USER-NAME/electivegroup-react-trello.git",
         "redux": "4.0.0",
         "redux-actions": "2.6.1",
         "redux-logger": "3.0.6",
