@@ -11,7 +11,7 @@ const CustomTag = ({
   deleteTag
 }) => (
   <Tag
-    key={title}
+    key={tagId}
     title={title}
     color={color}
     bgcolor={bgcolor}
