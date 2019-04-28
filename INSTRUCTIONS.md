@@ -1,8 +1,12 @@
-## Getting Started
+# Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-# Instructions
+## Demo link
+
+The app can be viewed here: https://recii.herokuapp.com.
+
+## Instructions
 
 To get the project up and running locally you will need to do the following:
 
