@@ -12,7 +12,7 @@ let data = {
           id: "Card2",
           title: "Hired Bernard yet?",
           description:
-            "Click the title three times to edit and double click to stop editing.",
+            "Click content to edit.",
           label: "Fri Apr 19 2019 15:50:40 GMT+0100",
           tags: []
         },
